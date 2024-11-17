@@ -1,0 +1,576 @@
+/* Importing Google Fonts */
+/* 'Protest Guerrilla' for headings and 'Josefin Sans' for body text */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the body of the webpage */
+body {
+    background-color: #e9e9e9; /* Light grey background */
+}
+
+/* ROOT VARIABLES FOR SPACING */
+:root {
+    /* Defining spacing variables for different screen sizes */
+    --spacing-small-mobile: 12px;
+    --spacing-large-mobile: 20px;
+    --spacing-tablet: 30px;
+    --spacing-desktop: 50px;
+}
+
+/* HEADER AND NAV STYLING */
+header {
+    text-align: center; /* Centering header content */
+}
+
+.logo img {
+    margin: var(--spacing-desktop);
+    width: 200px; /* Default logo size for desktop */
+}
+
+nav ul {
+    display: flex; /* Flexbox layout for navigation items */
+    justify-content: space-around; /* Evenly distributing nav items */
+    list-style: none; /* Removing bullet points from list items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removing underlines from nav links */
+    color: black; /* Black text for navigation links */
+    font-weight: bold; /* Bold text for navigation */
+    font-size: 20px; /* Font size for navigation */
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* STYLING FOR THE MAIN CONTENT */
+main {
+    margin: var(--spacing-desktop); /* Default margin for desktop */
+}
+
+#main-content {
+    background-color: white; /* White background for main content */
+    border: 1px solid black; /* Border around main content */
+}
+
+/* Media query for tablet*/
+@media (max-width: 720px) {
+    header {
+        padding: 0; /* Remove padding for tablet */
+    }
+
+    .logo img {
+        margin: var(--spacing-tablet); /* Adjusting logo margin */
+        width: 80px; /* Logo size for tablet */
+    }
+
+    nav ul {
+        margin: var(--spacing-tablet); /* Margin for nav on tablet */
+    }
+
+    nav ul li a {
+        font-size: 1.2em; /* Slightly increasing font size for tablet */
+    }
+
+    main {
+        margin: var(--spacing-tablet); /* Margin for main content on tablet */
+    }
+}
+
+/* Media query for large mobile (min-width: 540px) */
+@media (max-width: 540px) {
+    header {
+        padding: var(--spacing-large-mobile); /* Adjust padding for large mobile */
+    }
+
+    .logo img {
+        margin: var(--spacing-large-mobile); /* Logo margin for large mobile */
+        width: 80px; /* Logo size for large mobile */
+    }
+
+    nav ul {
+        margin: var(--spacing-large-mobile); /* Margin for nav on large mobile */
+    }
+
+    nav ul li a {
+        font-size: 0.9em; /* Smaller font size for large mobile */
+    }
+
+    main {
+        margin: var(--spacing-large-mobile); /* Margin for main content on large mobile */
+    }
+}
+
+/* Media query for small mobile (max-width: 540px) */
+@media (max-width: 360px) {
+    header {
+        padding: var(--spacing-small-mobile); /* Adjust padding for small mobile */
+    }
+
+    .logo img {
+        margin: var(--spacing-small-mobile); /* Logo margin for small mobile */
+        width: 80px; /* Logo size for small mobile */
+    }
+
+    nav ul {
+        margin: var(--spacing-small-mobile); /* Margin for nav on small mobile */
+    }
+
+    nav ul li a {
+        font-size: .9em; /* Font size for small mobile */
+    }
+
+    main {
+        margin: var(--spacing-small-mobile); /* Margin for main content on small mobile */
+    }
+}
+
+/* FIRST-HEADING STYLING*/
+
+.first-heading {
+    padding-top: 20px;
+    padding-left: 25px;
+}
+.first-heading h1 {
+    font-size: 90px;/* Three times larger than default */
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+}
+
+.first-heading h2 {
+    font-size: 38px;
+    /* Three times larger than default */
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+}
+
+.first-heading p {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    text-align: left;
+    /* Left-aligned for all devices */
+    line-height: 1.5;
+    /* Adjust line height for readability */
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+/* Media query for Desktop */
+@media (max-width: 1024px) {
+    .first-heading {
+        text-align: left;/* Left-align all content on desktop */
+    }
+
+    .first-heading h1 {
+        font-size: 75px;/* Much larger for desktop as per wireframe */
+    }
+
+    .first-heading h2 {
+        font-size: 30px;/* H2 can remain as specified */
+    }
+
+    /* Maintain paragraph margins for desktop */
+    .first-heading p {
+        line-height: 1.7;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+/* Media query for Tablet */
+@media (max-width: 720px){
+    .first-heading {
+        text-align: center;
+        /* Centering the content for tablet */
+    }
+
+    .first-heading h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 70px;/* Adjusted size for tablet */
+        line-height: 1.2;/* Adjust line height to encourage wrapping */
+    }
+
+    .first-heading h2 {
+        text-align: center;
+        padding-right: 15px;
+        font-size: 60px;/* Adjusted size to help wrapping */
+        line-height: 1.2;/* Maintain line height */
+        display: block; /* Change to block to ensure it takes full width */
+        white-space: normal;/* Allow wrapping of the text */
+        max-width: 100%;/* Ensure it uses the full width */
+    }
+
+    /* Decrease paragraph margins for tablet */
+    .first-heading p {
+        text-align: left;
+        font-size: 18px;
+        margin-top: 10px;
+        padding-right: 25px;
+        line-height: 1.7;
+    }
+}
+
+/* Media query for Large Mobile */
+@media (max-width: 540px) {
+    .first-heading {
+        text-align: center;/* Centering the content for large mobile */
+    }
+
+    .first-heading h1 {
+        margin-top: 20px;
+        font-size: 48px;/* Maintain size for large mobile */
+    }
+
+    .first-heading h2 {
+        padding-right: 15px;
+        font-size: 40px;/* Maintain size for large mobile */
+        line-height: 1.2;/* Keep line height for wrapping */
+        display: inline-block;/* Allow it to wrap correctly */
+        white-space: normal;/* Allow wrapping of the text */
+    }
+
+    /* Decrease paragraph margins for large mobile */
+    .first-heading p {
+        text-align: left;
+        font-size: 15px;
+        margin-top: 10px;
+        line-height: 1.7;
+    }
+}
+
+/* Media query for Small Mobile */
+@media (max-width: 360px) {
+    .first-heading {
+        text-align: center;/* Keep content centered on small mobile */
+    }
+
+    .first-heading h1 {
+        padding-right: 20px;
+        margin-top: 20px;
+        font-size: 48px;/* Maintain size for small mobile */
+    }
+
+    .first-heading h2 {
+        padding-right: 25px;
+        font-size: 39px;/* Maintain size for small mobile */
+        line-height: 1.2;/* Keep line height for wrapping */
+        display: inline-block;/* Allow it to wrap correctly */
+        white-space: normal;/* Allow wrapping of the text */
+    }
+
+    /* Decrease paragraph margins for small mobile */
+    .first-heading p {
+        text-align: left;
+        font-size: 11.5px;
+        margin-top: 10px;
+    }
+}
+
+/* START OF THE HEADINGS AND PARAGRAPH*/
+
+.text {
+    padding: 25px;
+    padding-top: 10px;
+    column-count: 3;/* Ensures three columns */
+    column-gap: 30px; /* Adds space between columns */
+}
+
+.text h2 {
+    padding-bottom: 15px;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+
+.text p {
+    line-height: 1.7;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 15px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+/* Media query for Tablet */
+@media (max-width: 720px) {
+    .text {
+        column-count: 1;/* Make the text inline vertically */
+        padding: 10px; /* Adjust padding for tablet */
+    }
+
+    .text p {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 14px;/* Adjust font size for tablet */
+    }
+
+    .text h2 {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 36px;/* Adjust heading size for tablet */
+    }
+}
+
+/* Media query for Large Mobile */
+@media (max-width: 540px) {
+    .text {
+        column-count: 1;/* Make the text inline vertically */
+        padding: 10px;/* Adjust padding for large mobile */
+    }
+
+    .text p {
+        font-size: 13px;/* Adjust font size for large mobile */
+    }
+
+    .text h2 {
+        text-align: center;
+        font-size: 34px;/* Adjust heading size for large mobile */
+    }
+}
+
+/* Media query for Small Mobile */
+@media (max-width: 360px) {
+    .text {
+        column-count: 1;/* Make the text inline vertically */
+        padding: 10px; /* Adjust padding for small mobile */
+    }
+
+    .text p {
+        font-size: 12px;/* Adjust font size for small mobile */
+    }
+
+    .text h2 {
+        text-align: center;
+        font-size: 32px;/* Adjust heading size for small mobile */
+    }
+}
+
+/* STYLING FOR IMAGES*/
+
+#image-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+.featured-album {
+    width: 100%;
+    height: auto;
+    grid-column: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 2;
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Media query for Tablet */
+@media (max-width: 720px) {
+    .featured-album {
+        display: none;/* Hide featured album */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);/* Maintain 2x2 grid on tablet */
+        grid-column: span 2;/* Take full width when featured album is hidden */
+        justify-items: center; /* Center the images inside the grid */
+    }
+}
+
+/* Media query for Large and Small Mobile */
+@media (max-width: 540px) {
+    .featured-album {
+        display: none;/* Hide featured album */
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-container img {
+        width: 100%;
+    }
+}
+
+/* STYLING FOR THE AUTHOR IMAGE*/
+.author h2 {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;/* Adjust space below the heading */
+}
+
+.author p {
+    line-height: 1.5;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;/* Remove default margins */
+    text-align: left;
+}
+
+.author img {
+    width: 200px; /* Set a smaller width for the image */
+    height: 200px; /* Set a smaller height to match the width */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits properly */
+
+}
+
+/* Media Query for Large Mobile (540px-720px) and Small Mobile (360px-540px) */
+@media (max-width: 720px) {
+    .author {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center-align the items */
+    }
+
+    .author img {
+        order: -1; /* Moves the image to the top */
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px; /* Add space below the image */
+        margin-top: 20px; /* Remove top margin */
+    }
+
+    .author h2 {
+        margin-top: 10px; /* Adjust space above the heading */
+    }
+
+    .author p {
+        text-align: left; /* Center-align text for smaller screens */
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
+/* Media Query for Tablet (720px-1024px) */
+@media (min-width: 720px) and (max-width: 1024px) {
+    .author {
+        display: flex;
+        flex-direction: row; /* Align content horizontally */
+        justify-content: space-between; /* Distribute space between items */
+        align-items: center; /* Center the items vertically */
+    }
+
+    .author img {
+        margin-top: 20px; /* Add margin between text and image */
+        margin-right: 40px;
+        order: 2; /* Ensure image stays on the right side */
+    }
+
+    .author-text {
+        max-width: 75%;
+    }
+
+    .author h2{
+        margin-top: 30px;
+    }
+
+    .author p {
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
+}
+
+/* Media Query for Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    .author {
+        display: flex;
+        flex-direction: row; /* Keep content horizontally aligned */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .author-text {
+        margin: 25px;
+        padding-left: 55px;
+        max-width: 70%;
+        /* Set width for the text block */
+    }    
+
+    .author h2{
+        margin-top: 15px;
+        font-size: 50px;
+    }
+
+    .author img {
+        width: 200px; /* Set a smaller width for the image */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 100px; /* Add space between image and text */
+    }
+
+    .author p {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: left;
+        font-size: 19px;
+    }
+}
+
+/* STYLING FOR THE FOOTER*/
+
+footer {
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    background-color: #14181d;
+    color: white;
+    padding: 35px;
+    margin: 0; /* Ensure no margin around the footer */
+    width: 100%; /* Full viewport width */
+    box-sizing: border-box; /* Include padding within the width */
+}
+
+/* Small Mobile (360px-540px) */
+@media (min-width: 360px) and (max-width: 540px) {
+    footer {
+        font-size: 10px; /* Decrease font size */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Large Mobile (540px-720px) */
+@media (min-width: 540px) and (max-width: 720px) {
+    footer {
+        font-size: 15px; /* Slightly increase font size */
+        padding: 25px; /* Increase padding slightly */
+    }
+}
+
+/* Tablet (720px-1024px) */
+@media (min-width: 720px) and (max-width: 1024px) {
+    footer {
+        font-size: 16px; /* Default font size */
+        padding: 30px; /* Adjust padding for tablets */
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    footer {
+        font-size: 18px; /* Larger font for bigger screens */
+        padding: 35px; /* Maintain padding for desktops */
+    }
+}
+

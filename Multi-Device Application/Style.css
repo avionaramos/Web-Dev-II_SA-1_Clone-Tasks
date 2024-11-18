@@ -295,7 +295,7 @@ header nav ul li a {
 }
 
 /* Media Query for Tablets (max-width: 720px) */
-@media (min-width:720px ) and (max-width: 1024px) {
+@media (min-width:720px ) and (max-width: 1023px) {
 
     #main-content {
         display: flex;

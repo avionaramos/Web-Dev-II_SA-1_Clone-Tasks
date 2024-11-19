@@ -1,0 +1,268 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Layout grid */
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 60px 1fr;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    grid-column: 1 / -1;
+    background-color: #3B1E54;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header h1 {
+    font-size: 30px;
+}
+
+.profile-img {
+    border-radius: 50%;
+}
+
+.header-icons i {
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: #9B7EBD;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 0;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Dark mode toggle button */
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    padding: 0 10px;
+    /* Optional padding to center within the sidebar */
+}
+
+.theme-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.theme-toggle .slider {
+    position: relative;
+    width: 80%;
+    /* Full width of the container */
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    color: #fff;
+}
+
+.theme-toggle .slider i {
+    font-size: 0.8rem;
+    transition: color 0.3s;
+}
+
+.theme-toggle .slider::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    /* Toggle circle width */
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 1px;
+    left: 2px;
+    transition: transform 0.3s ease;
+    /* Smooth transition for movement */
+}
+
+.theme-toggle input[type="checkbox"]:checked+.slider {
+    background-color: #333;
+}
+
+.theme-toggle input[type="checkbox"]:checked+.slider::before {
+    /* Adjust `calc` to ensure the circle goes to the end of the slider */
+    transform: translateX(calc(555%));
+}
+
+.theme-toggle input[type="checkbox"]:checked+.slider .fa-sun {
+    color: #999;
+}
+
+.theme-toggle input[type="checkbox"]:not(:checked)+.slider .fa-moon {
+    color: #999;
+}
+
+/* Main content area */
+.main-content {
+    background-color: #D4BEE4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.main-content h2{
+    font-family:'Lucida Sans';
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Widget styling */
+.widget {
+    background-color: #AD49E1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Specific widgets styling */
+.widget.stats {
+    grid-column: 1 / span 2;
+}
+
+.widget.activity,
+.widget.notifications {
+    grid-column: span 1;
+}
+
+/* Canvas Styling */
+canvas {
+    max-height: 156px; /* Reduced height for the graph */
+    width: 100%; /* Maintain responsive width */
+}
+
+
+/* Styling for Recent Activity */
+.activity-list, .notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 100%; /* Ensure the list doesn't exceed widget height */
+}
+
+.activity-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.activity-time {
+    font-size: 0.8em;
+    color: #EEEEEE;
+    margin-right: 10px;
+    flex-shrink: 0;
+    width: 80px;
+}
+
+.activity-list p {
+    margin: 0;
+    font-size: .8em;
+}
+
+/* Styling for Notifications */
+.notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.notification-icon {
+    font-size: 1.2em;
+    color: #4caf50; /* Default icon color */
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.notification-list p {
+    margin: 0;
+    font-size: .9em;
+}
+
+/* Custom colors for different icons (optional) */
+.fa-envelope {
+    color: #2196f3;
+}
+
+.fa-exclamation-circle {
+    color: #f44336;
+}
+
+.fa-check-circle {
+    color: #4caf50;
+}
+
+/* Dark theme styles */
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme .header {
+    background-color: #1e1e1e;
+}
+
+.dark-theme .sidebar {
+    background-color: #1e1e1e;
+}
+
+.dark-theme .sidebar a {
+    color: #fff;
+}
+
+.dark-theme .main-content {
+    background-color: #2e2e2e;
+}
+
+.dark-theme .widget {
+    background-color: #3e3e3e;
+}

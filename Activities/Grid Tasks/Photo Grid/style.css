@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #DFF2EB;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+/* Photo Grid Styles */
+.photo-grid {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Default 1 column for small screens */
+.photo-grid img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+/* Hover effect */
+.photo-grid img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.923); /* Add shadow on hover */
+}
+
+
+/* 320px to 599px: Small screen adjustments */
+@media (max-width: 599px) {
+    header {
+        height: 70px;
+        padding: 0 15px;
+    }
+    .logo {
+        font-size: 1rem;
+    }
+}
+
+/* 600px to 899px: Medium screen adjustments */
+@media (min-width: 600px) and (max-width: 899px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header {
+        height: 80px;
+        padding: 0 30px;
+    }
+    .logo {
+        font-size: 1.25rem;
+    }
+}
+
+/* 900px to 1199px: Larger screen adjustments */
+@media (min-width: 900px) and (max-width: 1199px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    header {
+        height: 90px;
+        padding: 0 40px;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+/* 1200px and up: Largest screens */
+@media (min-width: 1200px) {
+    .photo-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    header {
+        height: 100px;
+        padding: 0 50px;
+    }
+    .logo {
+        font-size: 1.75rem;
+    }
+}

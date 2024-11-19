@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1507963901243-ebfaecd5f2f4?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTZ8MTY0NzgxOHx8ZW58MHx8fHx8);
+    background-image: url(https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWVzdGhldGljJTIwbGFuZHNjYXBlfGVufDB8fDB8fHww);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.logo {
+    text-align: center;
+}
+
+h1 {
+    background-color: #8d8d8d;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.874);
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.to-do-list {
+    margin: 0 auto;
+}
+
+.to-do-list-input {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.to-do-list-input input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.to-do-list-input button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.to-do-list-input button:hover {
+    background-color: #224060;
+}
+
+.todo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 3fr));
+    gap: 10px;
+    margin: 20px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    white-space: normal;
+    width: 100%; /* Ensure full width */
+}
+
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+    flex-shrink: 0; /* Keeps checkbox fixed in size */
+}
+
+.todo-item .task-text {
+    flex-grow: 1; /* Makes the text take up available space */
+    margin-right: 10px; /* Adds some space between the text and the button */
+}
+
+.todo-item button {
+    margin-left: auto; /* Pushes the button to the far right */
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Prevents the button from shrinking */
+}
+
+.todo-item button:hover {
+    background-color: #ff1a1a;
+}
+
+
+/* Responsive */
+@media (max-width: 480px) {
+    .to-do-list-input input {
+        width: 60%;
+    }
+
+    .to-do-list-input button {
+        padding: 10px;
+    }
+
+    .todo-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

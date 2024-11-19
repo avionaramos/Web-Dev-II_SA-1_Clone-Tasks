@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh; /* Make body take full viewport height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Sidebar takes 1/4th, main content takes 3/4ths */
+    width: 100%;
+    height: 100vh; /* Make container full height */
+    background-color: #FAF6E3;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: #B59F78;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.profile-header {
+    position: relative;
+    margin-top: 50px;
+}
+
+.circle-background {
+    background-color: #D8DBBD; /* Dark green color */
+    width: 114.5%; /* Full width of sidebar */
+    height: 200px; /* Adjust height as needed */
+    position: absolute;
+    top: -100px;
+    left: -20px;
+    z-index: 1;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.profile-pic {
+    position: relative;
+    z-index: 2;
+    margin-top: 40px; /* Adjust margin to position within circular background */
+}
+
+.profile-pic img {
+    width: 120px;
+    height: 140px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.profile-pic img:hover {
+    transform: scale(1.1); /* Scale the image slightly on hover */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.838); /* Add a subtle shadow on hover */
+}
+
+
+.username {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 220px; /* Adjust this value as needed to position vertically */
+    width: 100%;
+    right: 3px;
+    text-align: center;
+    z-index: 3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.location {
+    color: black;
+    font-size: 14px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    gap: 20px;
+}
+
+.stats div {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.stats span {
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.follow-btn, .message-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.follow-btn {
+    background-color: #2A3663;
+    color: white;
+}
+
+.message-btn {
+    background-color: #ffffff;
+    color: #004d4d;
+    border: 1px solid #004d4d;
+}
+
+.bio {
+    font-size: 14px;
+    color: #555;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 30px; /* Position above buttons */
+    width: 100%;
+    left: 0;
+}
+
+.photo-gallery i {
+    color: #004d4d;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.main-content {
+    padding: 40px;
+}
+
+.main-content h2{
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main-content p{
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Header -->
+    <div class="header">
+        <h1>Dashboard</h1>
+        <div class="header-icons">
+          <i class="fas fa-envelope"></i> <!-- Email icon -->
+          <i class="fas fa-bell"></i> <!-- Notification icon -->
+          <i class="fas fa-cog"></i> <!-- Settings icon -->
+          <img src="image.png" alt="User Profile" class="profile-img" width="35px" height="35px">
+        </div>
+      </div>
+      
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-chart-bar"></i> Statistics</a>
+        <a href="#"><i class="fas fa-history"></i> Recent Activity</a>
+        <a href="#"><i class="fas fa-bell"></i> Notifications</a>
+        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+      
+        <!-- Dark Mode Toggle Switch -->
+        <div class="theme-toggle">
+          <input type="checkbox" id="toggle" />
+          <label for="toggle" class="slider">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </label>
+        </div>
+      </div>
+            
+    <!-- Main Content Area -->
+<div class="main-content">
+    <div class="widget stats">
+      <h2>STATISTICS</h2>
+      <canvas id="lineChart"></canvas>
+    </div>
+    <div class="widget activity">
+        <h2>RECENT ACTIVITY</h2>
+        <ul class="activity-list">
+          <li>
+            <span class="activity-time">10:45 AM</span>
+            <p>User <strong>Amara Ramos</strong> logged in.</p>
+          </li>
+          <li>
+            <span class="activity-time">10:30 AM</span>
+            <p>File <strong>report.pdf</strong> was uploaded by <strong>Muhammad Ali</strong>.</p>
+          </li>
+          <li>
+            <span class="activity-time">10:15 AM</span>
+            <p> <strong>Admin </strong> updated system settings.</p>
+          </li>
+          <li>
+            <span class="activity-time">10:00 AM</span>
+            <p>User <strong>Michael Loopez</strong> logged out.</p>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="widget notifications">
+        <h2>NOTIFICATIONS</h2>
+        <ul class="notification-list">
+          <li>
+            <i class="notification-icon fas fa-envelope"></i>
+            <p><strong>New Message:</strong> You have received a message from <strong>Admin</strong>.</p>
+          </li>
+          <li>
+            <i class="notification-icon fas fa-exclamation-circle"></i>
+            <p><strong>System Alert:</strong> Scheduled maintenance at 3:00 PM.</p>
+          </li>
+          <li>
+            <i class="notification-icon fas fa-check-circle"></i>
+            <p><strong>Task Completed:</strong> Backup was successfully created.</p>
+          </li>
+        </ul>
+      </div>
+      
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

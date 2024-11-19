@@ -1,0 +1,194 @@
+/* Reset default padding and margin */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
+
+/* Set background image for body */
+body {
+    background-image: url(https://wallpapercave.com/wp/HoeSNQV.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+/* Styling for the nav bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Logo styling */
+.logo {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 130px;
+}
+
+/* Original nav list */
+.original ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.original ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.original ul li a:hover {
+    color: #DFF2EB;
+}
+
+/* Hover effect for nav links */
+.original ul li a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #DFF2EB;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.original ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 99;
+    margin: 10px; /* Optional: Add margin to separate from the top */
+}
+
+/* Bars of the hamburger button */
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.4s ease;
+}
+
+/* Transforming to "X" */
+.hamburger.is-active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 8px);
+}
+
+.hamburger.is-active .bar:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.hamburger.is-active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -7px);
+}
+
+/* Mobile Nav */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -60%; /* Start offscreen */
+    width: 25%; /* Maintain specified width */
+    height: 100vh; /* Set full height for the viewport */
+    background-color: #57428d; /* Background color */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+    transition: right 0.4s ease;
+    z-index: 98;
+}
+
+/* Show mobile nav when active */
+.mobile-nav.is-active {
+    right: 0; /* Slide in from the right */
+}
+
+/* Mobile nav links */
+.mobile-nav ul {
+    justify-content: center;
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Change to flex for vertical stacking */
+    flex-direction: column; /* Ensure links stack vertically */
+    flex-grow: 1; /* Allow ul to grow to fill remaining space */
+}
+
+.mobile-nav ul li {
+    padding: 20px;
+} 
+
+/* Links styling */
+.mobile-nav a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px; /* Add padding for clickable area */
+    transition: background-color 0.3s ease;
+}
+
+/* Change background color on hover */
+.mobile-nav a:hover {
+    color: #281064; /* Change background color on hover */
+}
+
+/* Social Media Styling */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Push to bottom of the nav */
+    margin-left: 30px;
+}
+
+.social-media i {
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect on icons */
+.social-media i:hover {
+    color: #281064;
+}
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 140px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 5em;
+    font-family: fantasy;
+    letter-spacing: .1em;}
+
+
+.hero p {
+    color: #fff;
+    font-size:2.5em;
+    font-family:fantasy;
+}

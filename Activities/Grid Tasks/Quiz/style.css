@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Spicy+Rice&family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://img.freepik.com/premium-photo/abstract-pui-73-background-wallpaper-gradient_792836-199027.jpg?semt=ais_hybrid);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin: 0 auto; /* Centers the title by setting left and right margins to auto */
+    text-align: center;
+}
+
+.title h1 {
+   font-family: "Anton SC", sans-serif;
+   font-size: 50px;
+   margin-right: 100px;
+   color: rgb(236, 162, 244);
+}
+
+.quiz {
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.question {
+    margin-bottom: 30px;
+}
+
+.question h1 {
+    font-family: "Teko", sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #180B2B;
+    background-color: #B57ADC;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for answers */
+    gap: 15px; /* Gap between grid items */
+}
+
+.quiz-option {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: #901edd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.quiz-option:hover {
+    background-color: #180B2B;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .choices {
+        grid-template-columns: 1fr; /* Stack buttons on smaller screens */
+    }
+
+    .quiz-option {
+        width: 100%; /* Ensure buttons take up full width */
+    }
+}

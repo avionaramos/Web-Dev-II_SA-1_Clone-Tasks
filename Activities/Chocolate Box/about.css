@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #432C14;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 10;
+}
+
+nav ul li a {
+    pointer-events: auto; /* Ensure links are clickable */
+}
+
+/* Style for Login Modal */
+.login-modal {
+    display: none; /* Hide modal by default */
+    z-index: 1000; /* Make sure it's above other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.login-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.login-modal-content button {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login-modal-content button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Navigation Icons */
+nav .icons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust spacing */
+}
+
+nav .icons i {
+    color: #ffffff;
+    font-size: 2em; /* Adjust size of the icons */
+    margin-left: 15px; /* Space between icons */
+    cursor: pointer; /* Optional: Make icons clickable */
+}
+
+.logo {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 130px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.original ul li a:hover {
+    color: #8b4311;
+}
+
+/* Original nav list */
+.original ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.original ul li {
+    margin-left: 40px;
+}
+
+/* Hover effect for nav links */
+.original ul li a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.original ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 99;
+    margin: 10px; /* Optional: Add margin to separate from the top */
+}
+
+/* Bars of the hamburger button */
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.4s ease;
+}
+
+/* Transforming to "X" */
+.hamburger.is-active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 8px);
+}
+
+.hamburger.is-active .bar:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.hamburger.is-active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -7px);
+}
+
+/* Mobile Nav */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -60%; /* Start offscreen */
+    width: 25%; /* Maintain specified width */
+    height: 100vh; /* Set full height for the viewport */
+    background-color: #57428d; /* Background color */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+    transition: right 0.4s ease;
+    z-index: 98;
+}
+
+/* Show mobile nav when active */
+.mobile-nav.is-active {
+    right: 0; /* Slide in from the right */
+}
+
+/* Mobile nav links */
+.mobile-nav ul {
+    justify-content: center;
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Change to flex for vertical stacking */
+    flex-direction: column; /* Ensure links stack vertically */
+    flex-grow: 1; /* Allow ul to grow to fill remaining space */
+}
+
+.mobile-nav ul li {
+    padding: 20px;
+} 
+
+/* Links styling */
+.mobile-nav a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px; /* Add padding for clickable area */
+    transition: background-color 0.3s ease;
+}
+
+/* Change background color on hover */
+.mobile-nav a:hover {
+    color: #281064; /* Change background color on hover */
+}
+
+/* Social Media Styling */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Push to bottom of the nav */
+    margin-left: 30px;
+}
+
+.social-media i {
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect on icons */
+.social-media i:hover {
+    color: #281064;
+}
+
+
+/* About Us section styling */
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Adjusted padding for better spacing */
+    background-color: #B89F87; /* Background color spans full width */
+    gap: 20px;
+    width: 100%; /* Ensures the section spans full width */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.about-us img {
+    margin-top: 10px;
+    width: 100%; /* Controls the size of the image */
+    max-width: 500px; /* Ensures the image doesn’t get too large */
+    height: auto; /* Maintains the image aspect ratio */
+}
+
+/* Wrapper div to contain both h3 and p inside a border */
+.text-box {
+    padding: 30px;
+    border: 2px solid #49230A; /* Adds border around both h3 and p */
+    box-sizing: border-box; /* Ensures padding and border are included in element's width */
+    border-radius: 10px;
+    max-width: 700px; /* Controls the width of the text box */
+}
+
+/* Text title (h3) styling */
+.text-box h3 {
+    font-family: 'Rye', serif;
+    font-size: 50px;
+    font-weight: 400;
+    color: #49230A;
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #49230A; /* Adds a separator below the h3 */
+}
+
+/* Paragraph (p) styling */
+.text-box p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #49230A;
+    text-align: justify;
+    margin: 15px 0 0 0; /* Adds some spacing above the paragraph */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column; /* Stack the content vertically on smaller screens */
+        text-align: center;
+    }
+
+    .about-us img {
+        width: 80%; /* Adjust the image size for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .text-box {
+        max-width: 100%;
+    }
+}
+
+.mockups {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    margin: 50px 0; /* Add some margin for spacing */
+    padding: 10; /* Remove padding to ensure full width */
+    width: 100%; /* Make sure the container takes full width */
+}
+
+/* Main headings styling */
+.mockups h3 {
+    font-family: 'Rye', serif; /* Set font family */
+    font-weight: 400;
+    font-size: 25px;
+    color: #ffffff; /* Set text color */
+    margin: 10px; /* Remove default margin */
+    padding: 20px; /* Padding inside the border */
+    border: 2px solid #ffffff; /* Border for the h3 */
+    border-radius: 10px;
+    display: inline-block; /* Display in-line */
+}
+
+/* Flex container for the first row of h3 elements */
+.mockups-header {
+    margin-left: 50px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+/* Mockups2 styling */
+.mockups2 {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the left */
+    margin-bottom: 30px; /* Spacing above this section */
+    margin-left: 60px; /* Margin on the left */
+    color: #ffffff; /* Set text color */
+}
+
+/* Add background color to the h3 elements within .mockups2 */
+.mockups2 h4 {
+    font-family: 'Rye', serif; /* Set font family */
+    font-weight: 400;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: #B89F87; /* Set the desired background color */
+    color: #49230A; /* Change text color for contrast */
+    padding: 20px; /* Padding inside the background color */
+    margin-top: 10px; /* Remove default margin */
+}
+
+/* Third h3 for Customers Reviews */
+.mockups2 h3:last-child {
+    margin-top: 0; /* Space above the last h3 */
+}
+
+
+/* Styling for the images */
+.mockups-images {
+    display: grid; /* Use grid layout for images */
+    grid-template-columns: repeat(2, 1fr); /* Two columns for images */
+    gap: 0; /* No gap between images */
+    width: 100%; /* Make sure the image container takes full width */
+}
+
+/* Ensure images take full width of their container */
+.mockups-images img {
+    width: 100%; /* Make images full width of their grid cell */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .mockups img {
+        width: 100%; /* Full width for images on smaller screens */
+        margin-bottom: 10px; /* Space below images */
+    }
+    
+    .mockups-images {
+        grid-template-columns: repeat(1, 1fr); /* Stack images in one column on small screens */
+    }
+}
+
+.feedback {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.feedback img {
+    margin-top: 30px;
+    width: calc(50% - 10px); /* Each image takes 50% width minus the space */
+}
+
+.palette {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Space between the images */
+    padding: 0 20px; /* Space on both sides of the images */
+    width: 100%; /* Full width of container */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    margin-top: 70px;
+}
+
+.palette img {
+    width: 100%; /* Full width of each grid cell */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0; /* No margin */
+
+}
+
+footer{
+    background-color: #B89F87;
+}
+
+footer p{
+    color: #432C14;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}

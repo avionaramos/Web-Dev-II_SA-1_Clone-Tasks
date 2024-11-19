@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata and page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Box</title>
+    
+    <!-- Stylesheets and Font Awesome icons -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.css" rel="stylesheet">
+    <link rel="icon" href="images/Logo (4).png" type="image/icon type">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Decorative Circle Background -->
+        <div class="circle-background"></div>
+
+        <!-- Main Navigation Bar -->
+        <nav class="original">
+            <!-- Logo Section -->
+            <div class="logo">
+                <img src="images/wcb logo.png" alt="Weston's Chocolate Box Logo" width="120px">
+            </div>
+
+            <!-- Navigation Links -->
+            <ul>
+                <li><a id="Home-link" href="index.html"> HOME</a></li>
+                <li><a id="About-link" href="about.html"> ABOUT</a></li>
+                <li><a id="Occasions-link" href="occasions.html"> OCCASIONS</a></li>
+                <li><a id="Contact-link" href="contact.html"> CONTACT US</a></li>
+            </ul>
+
+            <!-- User and Shopping Cart Icons -->
+            <div class="icons">
+                <i class="fas fa-user" id="user-icon"></i> <!-- User Icon -->
+                <i class="fas fa-shopping-cart"></i> <!-- Shopping Cart Icon -->
+            </div>
+
+            <!-- Cart Notification Badge -->
+            <div class="cart-notification" id="cart-notification" style="display: none;"></div>
+
+            <!-- Login Popup Modal -->
+            <div class="login-modal" id="login-modal">
+                <div class="login-modal-content">
+                    <span class="close-btn" id="close-btn">&times;</span>
+                    <h2>Login</h2>
+                    <form action="#">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <button class="submit-button" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Hamburger Menu for Mobile -->
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>WESTON'S <br>CHOCOLATE BOX</h1>
+                    <a href="#chocolate-box">
+                        <button>ORDER NOW</button>
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/choco logo.png" alt="Chocolate Box" class="chocolate-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="#home">PORTFOLIO</a></li>
+            <li><a href="#about">TASK 1</a></li>
+            <li><a href="#portfolio">CHOCOLATE BOX</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+
+        <!-- Social Media Links in Mobile Nav -->
+        <div class="social-media">
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </nav>
+
+    <!-- Chocolate Box Section -->
+    <section class="chocolate-box" id="chocolate-box">
+        <h2>BUILD YOUR OWN CHOCOLATE</h2>
+        <p>Build a personalized chocolate box by choosing your favorite flavors and types.</p>
+        <div class="grid-container">
+            <!-- Grid Item: Original Chocolate -->
+            <div class="grid-item">
+                <img src="images/Group 1 (3).png" alt="">
+                <h3>ORIGINAL CHOCOLATE</h3>
+                <p>Craft a classic box with rich, smooth chocolate for a timeless indulgence.</p>
+            </div>
+            <!-- Grid Item: Milk Chocolate -->
+            <div class="grid-item">
+                <img src="images/Group 2 (1).png" alt="">
+                <h3>MILK CHOCOLATE</h3>
+                <p>Select creamy milk chocolate for a sweet and velvety treat that melts in your mouth.</p>
+            </div>
+            <!-- Grid Item: Dark Chocolate -->
+            <div class="grid-item">
+                <img src="images/Group 3 (1).png" alt="">
+                <h3>DARK CHOCOLATE</h3>
+                <p>Choose bold and intense dark chocolate for a deep, bittersweet flavor experience.</p>
+            </div>
+            <!-- Grid Item: Hazel Praline -->
+            <div class="grid-item">
+                <img src="images/Group 4 (1).png" alt="">
+                <h3>HAZEL PRALINE</h3>
+                <p>Add a touch of luxury with hazelnut praline, combining crunchy nuts with silky chocolate.</p>
+            </div>
+        </div>
+        <button class="chocolate-button" id="build-yours-button">BUILD YOURS NOW</button>
+    </section>
+
+    <!-- Promotions Section -->
+    <section class="offers" id="promotions">
+        <h2>PROMOTIONAL & SPECIAL OFFERS</h2>
+        <div class="images-container">
+            <!-- Summer Offer -->
+            <div class="summer">
+                <h3>Summer Special</h3>
+                <img src="images/summer special.png" alt="">
+            </div>
+            <!-- Valentine's Offer -->
+            <div class="valentines">
+                <h3>Valentine's Day Offer</h3>
+                <img src="images/valentines.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="header-container">
+            <img src="images/logo- brown.png" alt="" class="footer-logo">
+            <h2>GET IN TOUCH</h2>
+        </div>
+        <div class="details-container">
+            <!-- Address -->
+            <div class="address">
+                <h3>Address</h3>
+                <p>No 143 Al Rigga Deira Dubai, UAE</p>
+            </div>
+            <!-- Working Hours -->
+            <div class="working-hours">
+                <h3>Working Hours</h3>
+                <p>Monday to Thursday - 6:30am to 9:00pm</p>
+                <p>Friday to Sunday - 7:00am to 11:00pm</p>
+            </div>
+            <!-- Social Media Accounts -->
+            <div class="social">
+                <h3>Social Media Accounts</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:example@example.com" class="social-icon email" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="social-icon facebook" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter Signup -->
+        <div class="discount">
+            <p>Get 20% off on your first purchase when you sign up for our newsletter and offers</p>
+            <div class="signup-container">
+                <input type="email" placeholder="Enter your email" class="email-input">
+                <button class="signup-button">Sign up</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Copy &copy Weston's Chocolate Box - All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

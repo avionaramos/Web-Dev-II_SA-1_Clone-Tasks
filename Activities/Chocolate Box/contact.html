@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="images/Logo (4).png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="original">
+            <div class="logo">
+                <a href="index.html">
+                <img src="images/Logo (3).png" alt="" width="120px">
+            </a>
+            </div>
+            <ul>
+                <li><a id="Home-link" href="index.html"> HOME</a></li>
+                <li><a id="About-link" href="about.html"> ABOUT</a></li>
+                <li><a id="Occasions-link" href="occasions.html">OCCASIONS</a></li>
+                <li><a id="Contact-link" href="contact.html">CONTACT US</a></li>
+            </ul>
+
+            <div class="icons">
+                <i class="fas fa-user" id="user-icon"></i> <!-- User Icon -->
+                <i class="fas fa-shopping-cart"></i> <!-- Shopping Cart Icon -->
+            </div>
+
+            <!-- Login Popup Modal -->
+            <div class="login-modal" id="login-modal">
+                <div class="login-modal-content">
+                    <span class="close-btn" id="close-btn">x&times;</span>
+                    <h2>Login</h2>
+                    <form action="#">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="#home">PORTFOLIO</a></li>
+            <li><a href="#about">TASK 1</a></li>
+            <li><a href="#portfolio">CHOCOLATE BOX</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="post" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in Touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="e465536f-c99f-487f-87b0-4c3b52ca9b07">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <input type="phone number" name="phone number" placeholder="Your Phone Number" class="contact-inputs"
+                required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <!--SOCIAL MEDIA SECTION-->
+        <div class="contact-right">
+            <img src="images/Logo (3).png" alt="" width="150px" class="icon">
+            <h1>Social Media Accounts</h1>
+            <ul>
+                <li><a href="https://www.facebook.com/aviona.ramos?mibextid=LQQJ4d"> Facebook</a></li>
+                <li><a
+                        href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Frmsavionaa%3Figsh%3DOWQwZmh4eTdxcGpv%26utm_source%3Dqr%26fbclid%3DIwZXh0bgNhZW0CMTAAAR2iYcxo9E9xOClfx-xlR-DfYiEqiDm7eZDZo44YrW3SRMBvsep9XkWNBYw_aem_AQw4nYNFBLRrXd4VDLGkfovbI73nYuqy9GyV1SYV5VndfpLG1P48HWFewjy9I9DvkMbZn1qORk-TT28jXokfK5sD&h=AT30VhDyEmj_uxEsLWgNqQTWk_2Izg6_wp6oUZhyhxIxiufXJbX6iyu09cLcyai0PI2bPluBzPx6TcOnCSft5D9YXS3zV0T4p5ccV5Un00HDqtCkaKn341JMDC6OUmNiqzBAhdU4kIVLDCTGIW25Rg">Instagram</a>
+                </li>
+                <li><a
+                        href="https://l.facebook.com/l.php?u=https%3A%2F%2Fx.com%2Favionarms%2Fstatus%2F1794939524889608465%3Fs%3D46%26t%3D3x_4aFtLMyUVkj7KlH-Clw%26fbclid%3DIwZXh0bgNhZW0CMTAAAR1Yn2G-RYcfzVQzCPt3qlzz0Sl5ulmBc0n6dPumGo5IOi0Oz31CBIUZ4wU_aem_AQwFKwBo9y5XK7Ki1Gmh3kSYJZ6mKRxl1_DxhGTpa1f9kfgK-orDuE-VfOsEW1D_TO9rmL6hu40AjLlrGFURy2o-&h=AT30VhDyEmj_uxEsLWgNqQTWk_2Izg6_wp6oUZhyhxIxiufXJbX6iyu09cLcyai0PI2bPluBzPx6TcOnCSft5D9YXS3zV0T4p5ccV5Un00HDqtCkaKn341JMDC6OUmNiqzBAhdU4kIVLDCTGIW25Rg">Twitter</a>
+                </li>
+                <li><a href="https://www.youtube.com/@avionaramos-ni5xs"> Youtube</a></li>
+                <li><a href="https://github.com/avionaramos/avionagithub.io.git">Github</a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/aviona-ramos-150133279/" class="sm">LinkedIn</a></li>
+            </ul>
+            <!--CONTACT DEATAILS SECTION-->
+            <div class="details">
+                <h1>Contact Details</h1>
+                <ul>
+                    <li><a href="mailto:avionaramos0@gmail.com">avionaramos0@gmail.com</a></li>
+                    <li><a class="phone" href="tel:+971528795811">+971 52 879 5811</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copy &copy Weston's Chocolate Box - All Rights Reserved</p>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
